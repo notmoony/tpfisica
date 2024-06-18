@@ -19,6 +19,7 @@ public class fium : MonoBehaviour
     [SerializeField] private float _distanciaMax = 3f;
     [SerializeField] private float _shotForce = 5f;
     [SerializeField] private float _timeBetweenBirdRespawn = 2f;
+    [SerializeField] private GameObject _desactivarCollider;
 
 
     [Header("Script")]
@@ -37,7 +38,7 @@ public class fium : MonoBehaviour
     private bool _pajaroTrichera;
 
     private red _spawnPajaro;
-
+    
     private void Awake()
     {
         _izquierdaRender.enabled = false;
@@ -57,6 +58,12 @@ public class fium : MonoBehaviour
         {
             DibujarLineas();
             PositionAndRotationPajaro();
+            
+            Collider2D collider = _desactivarCollider.GetComponent<Collider2D>();
+            if (collider != null && _desactivarCollider.layer == LayerMask.NameToLayer("ignorar"))
+            {
+                Physics2D.IgnoreCollision(collider, _spawnPajaro.GetComponent<Collider2D>(), true);
+            }
         } 
 
         if (Mouse.current.leftButton.wasReleasedThisFrame && _pajaroTrichera)
@@ -65,6 +72,12 @@ public class fium : MonoBehaviour
             {
                 _clickEnElArea = false;
                 _pajaroTrichera = false;
+                
+                Collider2D collider = _desactivarCollider.GetComponent<Collider2D>();
+                if (collider != null && _desactivarCollider.layer == LayerMask.NameToLayer("ignorar"))
+                {
+                    Physics2D.IgnoreCollision(collider, _spawnPajaro.GetComponent<Collider2D>(), false);
+                }
 
                 _spawnPajaro.Lanzar(_LineasDirection, _shotForce);
                 gameManager.instance.UsarShots();
