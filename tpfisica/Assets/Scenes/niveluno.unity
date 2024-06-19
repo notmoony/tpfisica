@@ -1138,7 +1138,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: 768863439, guid: 1fa4782fb74fdfd4c83724035966bac9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1158,12 +1158,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 144846137}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.8712144, y: -3.054981, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.06400013, y: 1.161, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 213654806}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &147270403
 GameObject:
@@ -1643,7 +1643,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: -851356303, guid: 1fa4782fb74fdfd4c83724035966bac9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1667,7 +1667,8 @@ Transform:
   m_LocalPosition: {x: 4.8072143, y: -4.215981, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 144846139}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &213654807
@@ -2384,7 +2385,7 @@ Transform:
   m_GameObject: {fileID: 343804393}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.248286, y: -2.240981, z: 0}
+  m_LocalPosition: {x: -4.26, y: -2.240981, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2415,6 +2416,7 @@ MonoBehaviour:
   _distanciaMax: 5
   _shotForce: 9
   _timeBetweenBirdRespawn: 2
+  _desactivarCollider: {fileID: 213654804}
   _areaDisparo: {fileID: 2098721440}
   _pajaro: {fileID: 4800651386376559727, guid: 8600b04563e11d84aa2639e31520172e, type: 3}
   _pajaroFueraSet: 0.275
@@ -3309,7 +3311,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -1
+  m_SortingOrder: -5
   m_Sprite: {fileID: 1557223080, guid: 1fa4782fb74fdfd4c83724035966bac9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -10239,7 +10241,6 @@ SceneRoots:
   - {fileID: 1510086015}
   - {fileID: 358123112}
   - {fileID: 2136604766}
-  - {fileID: 144846139}
   - {fileID: 213654806}
   - {fileID: 442693740}
   - {fileID: 343804395}
